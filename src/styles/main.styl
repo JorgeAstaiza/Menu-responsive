@@ -1,0 +1,74 @@
+@import "normalize.css"
+$black = #212121
+$white = #FAFAFA
+
+.header
+	background-color $black
+	color $white
+	height 64px
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 10
+	display flex
+	flex-direction column
+	&-menu
+		display flex
+		justify-content space-between
+	&-titulo
+		order 1
+		margin-left .5em
+		margin-top .3em
+		margin-bottom 0
+		padding 0
+	&-boton
+		order 2
+		border-radius 6px
+		border 0
+		padding 0
+		margin 1em
+		background-color $black
+		color $white
+	&-navegacion
+		background-color $black
+	&-listaMenu
+		height 0
+		overflow hidden 
+		list-style none
+		padding 0
+		margin 0
+		transition height .3s ease 
+		&--show
+			height 280px
+		&-item
+			a
+				text-decoration none
+				width 100%
+				display block
+				padding 1.5em
+				color $white
+@media (min-width: 768px)
+	.header
+		display flex
+		flex-direction row
+		justify-content space-between
+		height 75px
+		transition all .2s ease
+		flex-wrap wrap
+		line-height 75px
+		&-boton
+			display none
+		&-titulo
+			padding 0
+			margin 0 .5em
+		&-listaMenu
+			/*display flex
+			flex-direction row*/
+			height 75px
+			padding 0
+			margin 0
+			&-item
+				display inline-block
+				a
+					padding 0 1em
